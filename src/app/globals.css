@@ -2,46 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
 .blabla::-webkit-scrollbar {
   width: 0px; /* Adjust the width as needed */
 }
 
-.blabla::-webkit-scrollbar-track {
-  background: transparent; /* This makes the track transparent */
-}
-
-.blabla::-webkit-scrollbar-thumb {
-  background-color: transparent; /* This makes the thumb (scrollbar) transparent */
-}
-
-.blabla {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
-}
-
-.w-300px {
-  /* max-width: 1300px; */
-  width: 350px;
+.input {
+  @apply placeholder:pl-1 rounded-lg placeholder:text-[#919191] bg-transparent focus-visible:outline-none
 }

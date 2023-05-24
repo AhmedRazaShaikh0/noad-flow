@@ -12,10 +12,9 @@ interface FurnType {
     bathrooms: number,
 }
 
-const Gridcard = ({ elem }: any) => {
+const Gridcard = ({ elem }: { elem: FurnType }) => {
     return (
-        <div className=''>
-            <div className=' text-[#00878A] bg-[#E6F3F3] w-300px rounded-xl ' key={elem.id}>
+            <div className=' text-[#00878A] bg-[#E6F3F3] md:w-[370px] w-[250px] rounded-xl ' key={elem.id}>
                 <Image src={elem.image} alt='Furniture' width={380} height={215} className='rounded-t-xl' />
                 <div className='p-4'>
                     <h2 className='font-medium text-xs'>{elem.location}</h2>
@@ -31,7 +30,6 @@ const Gridcard = ({ elem }: any) => {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 
