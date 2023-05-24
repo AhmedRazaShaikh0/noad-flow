@@ -14,13 +14,13 @@ interface FurnType {
 
 const Gridcard = ({ elem }: any) => {
     return (
-        <>
-            <div className=' text-[#00878A] bg-[#E6F3F3] rounded-xl' key={elem.id}>
+        <div className=''>
+            <div className=' text-[#00878A] bg-[#E6F3F3] w-300px rounded-xl ' key={elem.id}>
                 <Image src={elem.image} alt='Furniture' width={380} height={215} className='rounded-t-xl' />
                 <div className='p-4'>
                     <h2 className='font-medium text-xs'>{elem.location}</h2>
                     <h1 className='font-semibold text-lg text-[#004446]'>{elem.title}</h1>
-                    <h1 className='font-normal text-base'>{elem.description}</h1>
+                    <h1 className='font-normal text-base '>{elem.description}</h1>
                     <div className='text-[#004446] font-medium flex gap-4'>
                         <span className='flex gap-1'>
                             <Image src={'Bedrooms.svg'} alt='' width={20} height={20} />{elem.bedrooms}</span>
@@ -31,7 +31,7 @@ const Gridcard = ({ elem }: any) => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
