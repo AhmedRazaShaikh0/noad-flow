@@ -1,4 +1,4 @@
-export const Furniture = [
+export const furniture = [
     {
         id: 1,
         image: '/Furniture.png',
