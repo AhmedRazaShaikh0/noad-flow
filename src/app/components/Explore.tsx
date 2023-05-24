@@ -3,18 +3,7 @@ import React, { useState } from 'react'
 import { furniture } from './Database'
 import Gridcard from './Gridcard'
 import Image from 'next/image'
-
-
-interface FurnType {
-    id: number,
-    image: string,
-    location: string,
-    title: string,
-    description: string,
-    bedrooms: number,
-    workstations: number,
-    bathrooms: number,
-}
+import { FurnType } from './Gridcard'
 
 export default function Explore() {
 
@@ -65,15 +54,11 @@ export default function Explore() {
             </div>
 
             <div className='md:pl-12 pl-8 max-w-[1350px] m-auto'>
-
-                {/* <button onClick={() => setFilteredData(furniture)} className='text-red-500' >clear</button> */}
-
-
                 <div className='mt-6'>
                     <h1 className='text-2xl text-black'>Top Picks For You - <span className='text-[#004446]'>Amsterdam</span></h1>
                     <div className='grid grid-flow-col mt-4 gap-3 overflow-x-scroll blabla'>
                         {filteredData.map((elem: FurnType) =>
-                            <Gridcard elem={elem} />
+                            <Gridcard elem={elem} key={elem.id} />
                         )}
                     </div>
                 </div>
@@ -82,7 +67,7 @@ export default function Explore() {
                     <h1 className='text-2xl text-black'>Members looking to travel to your location - <span className='text-[#004446]'>Ljubjana</span></h1>
                     <div className='grid grid-flow-col mt-4 gap-3 overflow-x-scroll blabla'>
                         {filteredData.map((elem: FurnType) =>
-                            <Gridcard elem={elem} />
+                            <Gridcard elem={elem} key={elem.id} />
                         )}
                     </div>
                 </div>

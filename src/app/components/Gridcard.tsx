@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-interface FurnType {
+export interface FurnType {
     id: number,
     image: string,
     location: string,
